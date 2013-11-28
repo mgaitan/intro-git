@@ -138,21 +138,52 @@ O todos los cambios en archivos *trackeados*
 
 ---------
 
+¿Dónde estoy?
+--------------
+
+.. code:: bash
+
+    git status
+
+.. code:: bash
+
+    git log
+    git log
+
+.. code:: bash
+
+    gitk
+
+---------
+
 Deshaciendo
 -------------
 
-Cambios locales
+Corregir el último commit
+
 
 .. code:: bash
 
-    git checkout file.py
+    git commit --amend
 
-Commits
+"Desagregar" (unstage)
 
 .. code:: bash
 
-    git reset --hard HEAD^
-    git reset 456fc1a
+    git reset HEAD file.py  # o bien
+    git rm --cached file.py
+
+Restaurar archivo (por defecto ``HEAD``)
+
+.. code:: bash
+
+    git checkout [rev] -- file.py
+
+Revertir commit
+
+.. code:: bash
+
+    git revert 1776f5
 
 
 --------
@@ -174,8 +205,68 @@ Dejar de *trackear*:
 
 ------------
 
+¿que diferencias hay?
+----------------------
 
+Cambios locales
 
+.. code:: bash
+
+    git diff
+
+Cambios en stage
+
+.. code:: bash
+
+    git diff --cached
+
+Respecto a una revision
+
+.. code:: bash
+
+    git diff 1776f5
+
+Regalo de dios
+
+.. code:: bash
+
+    meld .
+
+--------
+
+.gitignore
+----------
+
+.. code:: bash
+
+    $ cat .gitignore
+    *.pyc
+    *.swp
+    /build/
+    /doc/[abc]*.txt
+    .pypirc
+    *.egg-info
+
+.. note::
+
+    • Blank lines or lines starting with # are ignored
+    • Standard glob patterns work
+    • End pattern with slash (/) to specify a directory
+    • Negate pattern with exclamation point (!)
+
+---------
+
+Repos remotos
+
+Son
+
+• Other clones of the same repository
+• Can be local (another checkout) or remote (coworker, central server)
+• There are default remotes for push and pull
+
+$ git remote -v
+origin git://github.com/schacon/ticgit.git (fetch)
+origin git://github.com/schacon/ticgit.git (push)
 
 
 
