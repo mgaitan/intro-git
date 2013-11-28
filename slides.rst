@@ -280,6 +280,10 @@ Cada copia tiene **toda la historia**
 
 
 
+revisar
+
+http://www.gabrielsaldana.org/platica_git.pdf
+
 
 
 http://dbrgn.ch/slides/20130207_getting_git/
