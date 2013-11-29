@@ -1,5 +1,5 @@
 :title: Introducción a Git
-:venue: 8va Jornadas de Software Libre de la UNNOBA
+:venue: 8vas Jornadas de Software Libre de la UNNOBA
 :author: Martín Gaitán
 :css: slides.css
 
@@ -11,7 +11,7 @@ Introducción a Git
 .. image:: img/Git-Logo-1788C.png
 
 
-Martín Gaitán / @tin_nqn_ / #8JSLUnnoba
+Martín Gaitán / @tin_nqn_ / #8JSL
 
 --------
 
@@ -47,6 +47,17 @@ Algunos creyeron evolucionar
 .. image:: img/meme1.jpg
 
 ---------
+
+Luego CVS/SVN
+--------------
+
+- Centralizado
+- Dependiente de la red para casi todo
+- Ramas dificiles
+
+
+
+
 
 Lo
 
@@ -258,15 +269,161 @@ Regalo de dios
 
 Repos remotos
 
-Son
+- Son técnicamente iguales a nuestra copia de trabajo
+- Pueden ser locales o remotos (ssh, https, etc.)
 
-• Other clones of the same repository
-• Can be local (another checkout) or remote (coworker, central server)
-• There are default remotes for push and pull
+.. code:: bash
 
-$ git remote -v
-origin git://github.com/schacon/ticgit.git (fetch)
-origin git://github.com/schacon/ticgit.git (push)
+    $ git remote -v
+    origin git://github.com/mgaitan/intro-git.git (fetch)
+    origin git://github.com/mgaitan/intro-git.git (push)
+
+-------
+
+Empujando al remoto
+-------------------
+
+Sin default
+
+.. code:: bash
+
+   git push <remote> <rbranch>
+
+definiendo un default remoto para la rama actual
+
+
+.. code:: bash
+
+    git push -u <remote> <rbranch>
+
+Luego
+
+.. code:: bash
+
+    git push
+
+-------
+
+Al reves (pull)
+---------------
+
+
+.. code:: bash
+
+    git pull [<remote> <rbranch>]
+
+``pull == fetch + merge``
+
+---------------
+
+Crear tags
+-----------
+
+Ponerle "nombre" a una revisión.
+
+.. code:: bash
+
+    git tag v0.1.0
+
+Los tags son locales, pero se pueden pushear
+
+.. code:: bash
+
+    git push --tags
+
+----------------
+
+Ramas
+------
+
+.. epigraph::
+
+    De rama en rama se ve aquel amor que juraba
+    que no me habría de olvidar
+
+    -- Los Tigres del Norte, *De rama en rama*
+
+- Cambio de contexto indoloro (locales y rápidas)
+- Son *punteros móviles* a un commit
+- La rama por omisión se llama **master**
+
+.. note::
+
+     Factores externos necesitan inevitablemente de cambios de contexto.
+
+     - Un bug severo se manifiesta en la última versión sin previo aviso.
+     - El plazo para alguna presentación se acorta.
+     - Un desarrollador que tiene que ayudar en una sección indispensable
+       del proyecto está por tomar licencia.
+     - Simplemente necesitas probar una idea
+
+     En cualquier caso, debes soltar abruptamente lo que estás haciendo y enfocarte en una tarea completamente diferente.
+
+-------
+
+Creando una rama
+----------------
+
+.. code:: bash
+
+    git branch experimento_loco
+    git checkout experimento_loco
+
+o directamente:
+
+.. code:: bash
+
+    git checkout -b experimento_loco
+
+----------
+
+Más comandos para ramas
+------------------------
+
+.. code:: bash
+
+    git checkout NOMBRE_RAMA
+
+``checkout`` requiere todo *limpio*.
+``stash`` es nuestra alfombra para esconder
+
+.. code:: bash
+
+    git stash
+    git checkout NOMBRE_RAMA
+    ...
+    git checkout NOMBRE_RAMA_ORIGINAL
+    git stash pop
+
+----------
+
+Mezclar
+--------
+
+Desde otra rama. Ej: master
+
+.. code:: bash
+
+    git merge experimento_loco
+
+-----
+
+
+Listo, donde subo mi código?
+----------------------------
+
+.. image:: img/github_logo.jpg
+
+
+- No sólo **hosting** git gratis (para software libre)
+- Es una **plataforma social y profesional**
+- ¡Colaborar con OSS nunca fue tan fácil!
+- Comunicación técnica en contexto
+- Código mata curriculum
+- Enterarse de tendencias y aprender de cracks
+
+-------
+
 
 
 
