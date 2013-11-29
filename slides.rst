@@ -159,7 +159,7 @@ Instalación
 Configuración
 -------------
 
-*Quién sos*
+Quién sos
 
 .. code:: bash
 
@@ -167,7 +167,7 @@ Configuración
     git config --global user.email gaitan@gmail.com
 
 
-*Tu editor*
+Tu editor
 
 .. code:: bash
 
@@ -184,7 +184,7 @@ Crear un repo local
 
     git init
 
-Luego se pueden declarar repos remoto
+Luego se pueden declarar repos remotos
 
 .. code:: bash
 
