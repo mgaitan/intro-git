@@ -25,7 +25,7 @@ Quién soy
 - Ingeniero en Computación (UNC)
 - Emprendedor (@Phasety)
 - Pythonista desde 2007
-- Git? Más que experto, ex-principiante
+- ¿Git? Más que experto, ex-principiante
 
 gaitan@gmail.com - http://mgaitan.github.io
 
@@ -678,6 +678,7 @@ Más info / práctica
 - Git magic
 - Githug
 - Github help
+- Esta charla: http://github.com/mgaitan/intro-git
 
 
 ---------
