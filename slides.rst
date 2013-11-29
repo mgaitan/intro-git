@@ -4,8 +4,8 @@
 :css: slides.css
 :skip-help: true
 
-Introducción a Git
-====================
+Introducción a
+===============
 
 
 .. image:: img/Git.png
@@ -22,15 +22,16 @@ Quién soy?
 ----------
 
 - Compañero de Nati, Zamba y Minou
-- Hincha de Boca y el dulce de leche
+- Hincha de Boca y del dulce de leche
 - Ingeniero en Computación (UNC)
 - Emprendedor (@Phasety)
 - Pythonista desde 2007
-- Git es
+- Git? Más que experto, ex-principiante
 
 (y gracias por la invitación)
 
 -----------
+
 
 En el principio...
 --------------------
@@ -48,6 +49,10 @@ En el principio...
 
 --------
 
+:data-rotate: 90
+:data-y: r1400
+
+
 .. code:: html
 
     From: Juan <juancho@todavianosegit.com>
@@ -55,7 +60,7 @@ En el principio...
     Subject: Trabajo
 
     Peter, acá te mando el zip con la última versión
-    de mi parte del trabajo
+    que incluye mi parte del trabajo
 
     ----
 
@@ -66,9 +71,12 @@ En el principio...
     Subject: Re: Trabajo
 
     Juancito, me olvidé de avisarte que yo ya había
-    hecho eso y cambié la API!
+    hecho esa parte y cambié la API!
 
 -------
+
+:data-rotate: 90
+:data-x: r-1400
 
 Algunos creyeron evolucionar
 ------------------------------
@@ -77,17 +85,27 @@ Algunos creyeron evolucionar
 
 .. note::
 
-     * soluciona la sincronizacion de la ultima versión
-     * 1 copia
+     * soluciona la sincronizacion de la última versión
+     * sin merge
 
 -----
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 .. image:: img/meme1.jpg
 
 ---------
 
-Luego progresamos: CVS/SVN
----------------------------
+:data-rotate: 90
+:data-y: r1400
+
+
+CVS/SVN
+--------
+
+Pero...
 
 - Centralizado
 
@@ -103,15 +121,21 @@ Luego progresamos: CVS/SVN
 
 --------
 
-Y llegaron los controles distribuídos
+Y llegaron los sistemas distribuídos
 -------------------------------------
 
+- Git / Mercurial / Bazaar
 - Todas las copias son repositorios
-- Más respaldo
-- Mejor experimentación
 - Dependen menos de la red
+- múltiples flujos posibles
+- Más respaldos
+- Experimentación / Branching fácil
 
 ------
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 Git: un DVCS rapidísimo y potente
 ----------------------------------
@@ -121,24 +145,29 @@ Git: un DVCS rapidísimo y potente
 - ¡Velocidad!
 - Integridad de datos
 - Poca depencia de red
-- Todos son clones: múltiples backups
-- Branching y merging: flujo versátil
-- Bancarse proyectos como Linux :)
+- Redundancia: todos son clones
+- Branching y merging fácil: flujo versátil
+- Bancarse proyectos como Linux
 - **Github**
 
 ----------
 
+:data-rotate: 90
+:data-y: r1400
+
 Los peros
 ---------
-
 
 - La documentación también es distribuída ;-)
 - La UI está llena de *WTF!*
 - No hay **una** manera obvia
-- Muchos nombres para referir lo mismo
-
+- Muchos nombres para referirse a lo mismo
 
 --------
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 Y no es tan fácil
 -----------------
@@ -147,41 +176,21 @@ Y no es tan fácil
 
 -----
 
-.. image:: img/img_1.png
-
------
-
 .. image:: img/img_2.png
-
------
-
-.. image:: img/img_3.png
-
------
-
-.. image:: img/img_4.png
 
 -----
 
 .. image:: img/img_5.png
 
------
-
-.. image:: img/img_6.png
-
------
-
-.. image:: img/img_7.png
-
------
-
-.. image:: img/img_8.png
-
------
+----
 
 .. image:: img/img_9.png
 
 -----
+
+:data-rotate: 0
+:data-y: r1400
+
 
 Instalación
 -----------
@@ -203,6 +212,10 @@ Instalación
     brew install git
 
 --------
+
+:data-rotate: 90
+:data-y: r1400
+
 
 Configuración
 -------------
@@ -299,7 +312,7 @@ Corregir el último commit
 
     git commit --amend
 
-"Desagregar" (unstage)
+Quitar del *stage*
 
 .. code:: bash
 
@@ -339,8 +352,8 @@ Dejar de *trackear*:
 
 ------------
 
-¿que diferencias hay?
-----------------------
+¿Qué cambié?
+------------
 
 Cambios locales
 
@@ -403,6 +416,10 @@ Repos remotos
     origin git://github.com/mgaitan/intro-git.git (push)
 
 -------
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 Empujando al remoto
 -------------------
@@ -561,15 +578,30 @@ O forzamos lo nuestro / lo de ellos
     git add file.rb
     git commit
 
-
-
 -----
 
+Rebase
+--------
+
+- Mover el origen de la rama
+- Muy útil para *reescribir la historia*
+- Recomendado antes de un *merge* a **master**
+
+.. image:: img/merge2.png
+
+.. image:: img/merge3.png
+
+.. code:: bash
+
+    # en feature-xyz
+    git rebase master
+
+------
 
 Listo, dónde subo mi código?
 ----------------------------
 
-- Bitbucket
+- Bitbucket / Gitorius
 - Server del trabajo / facu
 - Pero especialmente...
 
@@ -577,17 +609,18 @@ Listo, dónde subo mi código?
 
 ---------
 
-:data-reveal: 1
 
 Github
 -------
 
+.. epigraph::
+
+    Código mata curriculum
 
 - No es sólo **hosting** git gratis (para software libre)
 - Es una **plataforma social y profesional**
 - ¡Colaborar con OSS nunca fue tan fácil!
-- Comunicación técnica en contexto
-- Código mata curriculum
+- Gestión de proyectos / comunicación / revisión / etc.
 - Enterarse de tendencias y aprender de cracks
 
 -------
@@ -604,13 +637,15 @@ Preguntas?
 
 ------------
 
-Bibliografía
--------------
 
-http://dbrgn.ch/slides/20130207_getting_git/
-http://www.slideshare.net/CarlosTaborda/why-git-sucks-and-youll-use-it-anyways
-http://www.slideshare.net/leo.soto/introduccin-a-git
-https://speakerdeck.com/schacon/introduction-to-git
-http://www.slideshare.net/mickaeltr/git-github-leverage-your-open-source-projects
-http://www.slideshare.net/anildigital/git-introduction
+.. note::
+
+    Bibliografía
+
+    http://dbrgn.ch/slides/20130207_getting_git/
+    http://www.slideshare.net/CarlosTaborda/why-git-sucks-and-youll-use-it-anyways
+    http://www.slideshare.net/leo.soto/introduccin-a-git
+    https://speakerdeck.com/schacon/introduction-to-git
+    http://www.slideshare.net/mickaeltr/git-github-leverage-your-open-source-projects
+    http://www.slideshare.net/anildigital/git-introduction
 
