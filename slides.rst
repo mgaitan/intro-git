@@ -8,7 +8,7 @@ Introducción a Git
 ====================
 
 
-.. image:: img/Git-Logo-1788C.png
+.. .. image:: img/Git-Logo-1788C.png
 
 
 Martín Gaitán / @tin_nqn_ / #8JSL
@@ -19,11 +19,11 @@ Quién soy?
 ----------
 
 - Compañero de Nati, Zamba y Minou
-- Hincha de Boca
+- Hincha de Boca y el dulce de leche
 - Ingeniero en Computación (UNC)
-- Emprendedor (@Phasety
-- Pythonista
-- Git
+- Emprendedor (@Phasety)
+- Pythonista desde 2007
+- Git es
 
 (y gracias por la invitación)
 
@@ -33,9 +33,8 @@ En el principio...
 --------------------
 
 
-El (des)control de versiones
-
 .. image:: img/01-copies.png
+
 
 .. note::
 
@@ -46,24 +45,27 @@ El (des)control de versiones
 
 --------
 
-.. code:: xml
+.. code:: html
 
-    From: Juan <juancho@todavianose.git>
-    To: Pedro <pete@todavianose.git>
+    From: Juan <juancho@todavianosegit.com>
+    To: Pedro <pete@todavianosegit.com>
     Subject: Trabajo
 
     Peter, acá te mando el zip con la última versión
     de mi parte del trabajo
 
-.. code:: xml
+    ----
 
-    From: Pedro <pete@todavianose.git>
-    To: Juan <juancho@todavianose.git>
+.. code:: html
+
+    From: Pedro <pete@todavianosegit.com>
+    To: Juan <juancho@todavianosegit.com>
     Subject: Re: Trabajo
 
     Juancito, me olvidé de avisarte que yo ya había
     hecho eso y cambié la API!
 
+-------
 
 Algunos creyeron evolucionar
 ------------------------------
@@ -75,7 +77,7 @@ Algunos creyeron evolucionar
      * soluciona la sincronizacion de la ultima versión
      * 1 copia
 
----
+-----
 
 .. image:: img/meme1.jpg
 
@@ -86,16 +88,15 @@ Luego progresamos: CVS/SVN
 
 - Centralizado
 
-    - Cuello de botella y Talón de Aquiles
-    - Dependiente de la red para casi todo
+  - Cuello de botella y Talón de Aquiles
+  - Dependiente de la red para casi todo
 
 - Ramas difíciles
 
-    - Flujo lineal
-    - Dificulta el cambio de contexto
+  - Flujo lineal
+  - Dificulta el cambio de contexto
 
-
--------------
+--------
 
 Y llegaron los controles distribuídos
 -------------------------------------
@@ -105,6 +106,7 @@ Y llegaron los controles distribuídos
 - Mejor experimentación
 - Dependen menos de la red
 
+------
 
 Git: un DVCS rapidísimo y potente
 ----------------------------------
@@ -113,8 +115,9 @@ Git: un DVCS rapidísimo y potente
 
 - ¡Velocidad!
 - Integridad de datos
-- Branching y merging
-- Flujo versátil
+- Poca depencia de red
+- Todos son clones: múltiples backups
+- Branching y merging: flujo versátil
 - Bancarse proyectos como Linux :)
 - **Github**
 
@@ -124,10 +127,10 @@ Los pero
 ---------
 
 
-- La documentación también es distribuída
-- La UI está llena de WTF
+- La documentación también es distribuída ;-)
+- La UI está llena de *WTF!*
 - No hay **una** manera obvia
-- Muchos nombre para referir lo mismo
+- Muchos nombres para referir lo mismo
 
 
 ------
@@ -135,18 +138,20 @@ Los pero
 Instalación
 -----------
 
-**Windows **
+**Windows**
 
-http://code.google.com/p/msysgit
+*http://code.google.com/p/msysgit*
 
 **Linux**
 
-::
-    [apt-get|] install git
+.. code:: bash
+
+    apt-get install git
 
 **OS X**
 
-::
+.. code:: bash
+
     brew install git
 
 --------
@@ -166,7 +171,7 @@ Configuración
 
 .. code:: bash
 
-    git config --global core.editor subl
+    git config --global core.editor vim
 
 --------
 
@@ -207,25 +212,32 @@ O todos los cambios en archivos *trackeados*
 
 .. code:: bash
 
-    git commit -am 'El reactor nuclear funciona. Faltan tests del disparador'
+    git commit -am "El reactor nuclear funciona.
+    >    Faltan tests del disparador"
 
 ---------
 
 ¿Dónde estoy?
 --------------
 
+La brújula
+
 .. code:: bash
 
     git status
 
-.. code:: bash
-
-    git log
-    git log
+El libro de viaje
 
 .. code:: bash
 
-    gitk
+    git log
+
+GUIs
+
+.. code:: bash
+
+    gitk / gitg / tig / qgit
+
 
 ---------
 
@@ -250,7 +262,8 @@ Restaurar archivo (por defecto ``HEAD``)
 
 .. code:: bash
 
-    git checkout [rev] -- file.py
+    git checkou file.java
+    git checkout [rev] -- file.java
 
 Revertir commit
 
@@ -330,6 +343,7 @@ Regalo de dios
 ---------
 
 Repos remotos
+--------------
 
 - Son técnicamente iguales a nuestra copia de trabajo
 - Pueden ser locales o remotos (ssh, https, etc.)
@@ -351,14 +365,13 @@ Sin default
 
    git push <remote> <rbranch>
 
-definiendo un default remoto para la rama actual
-
+O definimos default remoto para la rama actual
 
 .. code:: bash
 
     git push -u <remote> <rbranch>
 
-Luego
+Y luego
 
 .. code:: bash
 
@@ -366,8 +379,8 @@ Luego
 
 -------
 
-Al reves (pull)
----------------
+Traeme lo nuevo (pull)
+-----------------------
 
 
 .. code:: bash
@@ -447,7 +460,7 @@ Más comandos para ramas
     git checkout NOMBRE_RAMA
 
 ``checkout`` requiere todo *limpio*.
-``stash`` es nuestra alfombra para esconder
+``stash`` es nuestra alfombra para esconder por un rato
 
 .. code:: bash
 
@@ -471,13 +484,21 @@ Desde otra rama. Ej: master
 -----
 
 
-Listo, donde subo mi código?
+Listo, dónde subo mi código?
 ----------------------------
+
+- Bitbucket
+- Server del trabajo / facu
+- Pero especialmente...
 
 .. image:: img/github_logo.jpg
 
+---------
 
-- No sólo **hosting** git gratis (para software libre)
+Github
+-------
+
+- No es sólo **hosting** git gratis (para software libre)
 - Es una **plataforma social y profesional**
 - ¡Colaborar con OSS nunca fue tan fácil!
 - Comunicación técnica en contexto
@@ -486,24 +507,20 @@ Listo, donde subo mi código?
 
 -------
 
+Preguntas?
+----------
 
 
+----------
 
 
+(Muchas gracias)
+-----------------
 
-Cada copia tiene **toda la historia**
+------------
 
-- No **quebramos** si se muere el disco del servidor
-- No **perdemos tiempo** en la red para ver la historia
-- Podemos **trabajar offline** sin *commits-bomba*
-
-
-
-revisar
-
-http://www.gabrielsaldana.org/platica_git.pdf
-
-
+Bibliografía
+-------------
 
 http://dbrgn.ch/slides/20130207_getting_git/
 http://www.slideshare.net/CarlosTaborda/why-git-sucks-and-youll-use-it-anyways
