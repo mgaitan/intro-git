@@ -15,6 +15,20 @@ Martín Gaitán / @tin_nqn_ / #8JSL
 
 --------
 
+Quién soy?
+----------
+
+- Compañero de Nati, Zamba y Minou
+- Hincha de Boca
+- Ingeniero en Computación (UNC)
+- Emprendedor (@Phasety
+- Pythonista
+- Git
+
+(y gracias por la invitación)
+
+-----------
+
 En el principio...
 --------------------
 
@@ -28,9 +42,28 @@ El (des)control de versiones
     * flujo totalmente lineal
     * impide colaboración
     * no hay historia.
-
+    * dónde hice qué
 
 --------
+
+.. code:: xml
+
+    From: Juan <juancho@todavianose.git>
+    To: Pedro <pete@todavianose.git>
+    Subject: Trabajo
+
+    Peter, acá te mando el zip con la última versión
+    de mi parte del trabajo
+
+.. code:: xml
+
+    From: Pedro <pete@todavianose.git>
+    To: Juan <juancho@todavianose.git>
+    Subject: Re: Trabajo
+
+    Juancito, me olvidé de avisarte que yo ya había
+    hecho eso y cambié la API!
+
 
 Algunos creyeron evolucionar
 ------------------------------
@@ -48,25 +81,54 @@ Algunos creyeron evolucionar
 
 ---------
 
-Luego CVS/SVN
---------------
+Luego progresamos: CVS/SVN
+---------------------------
 
 - Centralizado
-- Dependiente de la red para casi todo
-- Ramas dificiles
+
+    - Cuello de botella y Talón de Aquiles
+    - Dependiente de la red para casi todo
+
+- Ramas difíciles
+
+    - Flujo lineal
+    - Dificulta el cambio de contexto
 
 
+-------------
+
+Y llegaron los controles distribuídos
+-------------------------------------
+
+- Todas las copias son repositorios
+- Más respaldo
+- Mejor experimentación
+- Dependen menos de la red
 
 
+Git: un DVCS rapidísimo y potente
+----------------------------------
 
-Lo
+*Muy bien diez felicitado* en...
 
-- ¡Rápido!
-- Asegura integridad de datos
-- Soporte robusto de miles de ramas paralelas
-- Permite
-- Totalmente distribuído
-- Se banca proyectos como Linux :)
+- ¡Velocidad!
+- Integridad de datos
+- Branching y merging
+- Flujo versátil
+- Bancarse proyectos como Linux :)
+- **Github**
+
+----------
+
+Los pero
+---------
+
+
+- La documentación también es distribuída
+- La UI está llena de WTF
+- No hay **una** manera obvia
+- Muchos nombre para referir lo mismo
+
 
 ------
 
