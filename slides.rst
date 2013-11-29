@@ -11,7 +11,8 @@ Introducción a Git
 .. .. image:: img/Git-Logo-1788C.png
 
 
-Martín Gaitán / @tin_nqn_ / #8JSL
+Martín Gaitán / @tin_nqn_ / #8JSL / CC-by-sa
+
 
 --------
 
@@ -90,11 +91,13 @@ Luego progresamos: CVS/SVN
 
   - Cuello de botella y Talón de Aquiles
   - Dependiente de la red para casi todo
+  - Commits "bomba"
 
 - Ramas difíciles
 
   - Flujo lineal
-  - Dificulta el cambio de contexto
+  - Dificulta el cambio de contexto/colaboración
+
 
 --------
 
@@ -123,7 +126,7 @@ Git: un DVCS rapidísimo y potente
 
 ----------
 
-Los pero
+Los peros
 ---------
 
 
@@ -131,6 +134,53 @@ Los pero
 - La UI está llena de *WTF!*
 - No hay **una** manera obvia
 - Muchos nombres para referir lo mismo
+
+
+--------
+
+Y no es tan fácil
+-----------------
+
+.. image:: img/img_0.png
+
+-----
+
+.. image:: img/img_1.png
+
+-----
+
+.. image:: img/img_2.png
+
+-----
+
+.. image:: img/img_3.png
+
+-----
+
+.. image:: img/img_4.png
+
+-----
+
+.. image:: img/img_5.png
+
+-----
+
+.. image:: img/img_6.png
+
+-----
+
+.. image:: img/img_7.png
+
+-----
+
+.. image:: img/img_8.png
+
+-----
+
+.. image:: img/img_9.png
+
+-----
+
 
 
 ------
@@ -480,6 +530,29 @@ Desde otra rama. Ej: master
 .. code:: bash
 
     git merge experimento_loco
+
+------
+
+Mezcla con conflictos
+-----------------------
+
+A mano
+
+.. code:: bash
+
+    [corregimos los conflictos]
+    git add file.rb
+    git commit -m 'mezclando la rama X. corregi a mano el merge ...'
+
+Lo mio o lo de ellos
+
+.. code:: bash
+
+    git checkout --ours file.rb  # o --theirs
+    git add file.rb
+    git commit
+
+
 
 -----
 
