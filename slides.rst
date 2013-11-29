@@ -11,7 +11,7 @@ Introducción a
 .. image:: img/Git.png
 
 
-Martín Gaitán / @tin_nqn_ / #8JSL / CC-by-sa
+Martín Gaitán / `@tin_nqn_ <http://twitter.com/tin_nqn_>`_ / #8JSL / CC-by-sa
 
 --------
 
