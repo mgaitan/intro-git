@@ -13,13 +13,12 @@ Introducción a
 
 Martín Gaitán / @tin_nqn_ / #8JSL / CC-by-sa
 
-
 --------
 
 :data-reveal: 1
 
-Quién soy?
-----------
+Quién soy
+---------
 
 - Compañero de Nati, Zamba y Minou
 - Hincha de Boca y del dulce de leche
@@ -28,9 +27,10 @@ Quién soy?
 - Pythonista desde 2007
 - Git? Más que experto, ex-principiante
 
-(y gracias por la invitación)
+gaitan@gmail.com - http://mgaitan.github.io
 
 -----------
+
 
 
 En el principio...
@@ -105,7 +105,7 @@ Algunos creyeron evolucionar
 CVS/SVN
 --------
 
-Pero...
+Todo un avance, pero...
 
 - Centralizado
 
@@ -319,12 +319,12 @@ Quitar del *stage*
     git reset HEAD file.py  # o bien
     git rm --cached file.py
 
-Restaurar archivo (por defecto ``HEAD``)
+Restaurar archivo
 
 .. code:: bash
 
-    git checkou file.java
-    git checkout [rev] -- file.java
+    git checkout file.java  # por defecto ``HEAD``
+    git checkout [REV] -- file.java     # SHA1, tag, rama
 
 Revertir commit
 
@@ -373,20 +373,25 @@ Respecto a una revision
 
     git diff 1776f5
 
-Regalo de dios
+Visualmente
 
 .. code:: bash
 
-    meld .
+    meld .  # winmerge, kdiff3, otros...
 
 --------
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 .gitignore
 ----------
 
+No queremos control de **todo**
+
 .. code:: bash
 
-    $ cat .gitignore
     *.pyc
     *.swp
     /build/
@@ -402,6 +407,10 @@ Regalo de dios
     • Negate pattern with exclamation point (!)
 
 ---------
+
+:data-rotate: 90
+:data-y: r1400
+
 
 Repos remotos
 --------------
@@ -444,6 +453,10 @@ Y luego
 
 -------
 
+:data-rotate: 90
+:data-y: r1400
+
+
 Traeme lo nuevo (pull)
 -----------------------
 
@@ -483,7 +496,7 @@ Ramas
 
     -- Los Tigres del Norte, *De rama en rama*
 
-- Cambio de contexto indoloro (locales y rápidas)
+- Cambio de contexto indoloro (locales y rápidos)
 - Son *punteros móviles* a un commit
 - La rama por omisión se llama **master**
 
@@ -500,6 +513,10 @@ Ramas
      En cualquier caso, debes soltar abruptamente lo que estás haciendo y enfocarte en una tarea completamente diferente.
 
 -------
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 Creando una rama
 ----------------
@@ -520,6 +537,8 @@ o directamente:
 Más comandos para ramas
 ------------------------
 
+Cambiar de rama
+
 .. code:: bash
 
     git checkout NOMBRE_RAMA
@@ -537,6 +556,11 @@ Más comandos para ramas
 
 ----------
 
+
+:data-rotate: 90
+:data-y: r1400
+
+
 Mezclar
 --------
 
@@ -549,6 +573,11 @@ Desde otra rama. Ej: master
 .. image:: img/merge1.png
 
 ------
+
+
+:data-rotate: 90
+:data-x: r-1400
+
 
 En general hace magia
 ----------------------
@@ -580,6 +609,10 @@ O forzamos lo nuestro / lo de ellos
 
 -----
 
+:data-rotate: 0
+:data-y: r1400
+
+
 Rebase
 --------
 
@@ -598,6 +631,10 @@ Rebase
 
 ------
 
+:data-rotate: 90
+:data-y: r1400
+
+
 Listo, dónde subo mi código?
 ----------------------------
 
@@ -609,13 +646,12 @@ Listo, dónde subo mi código?
 
 ---------
 
+:data-rotate: 90
+:data-x: r-1400
+
 
 Github
 -------
-
-.. epigraph::
-
-    Código mata curriculum
 
 - No es sólo **hosting** git gratis (para software libre)
 - Es una **plataforma social y profesional**
@@ -623,7 +659,33 @@ Github
 - Gestión de proyectos / comunicación / revisión / etc.
 - Enterarse de tendencias y aprender de cracks
 
+.. epigraph::
+
+    Código mata curriculum
+
+
 -------
+
+:data-rotate: 90
+:data-y: r1400
+
+
+
+Más info / práctica
+--------------------
+
+- Progit
+- Git magic
+- Githug
+- Github help
+
+
+---------
+
+:data-rotate: 90
+:data-rotate-y: 180
+:data-y: r1400
+
 
 Preguntas?
 ----------
@@ -634,9 +696,6 @@ Preguntas?
 
 (Muchas gracias)
 -----------------
-
-------------
-
 
 .. note::
 
