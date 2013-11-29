@@ -2,19 +2,21 @@
 :venue: 8vas Jornadas de Software Libre de la UNNOBA
 :author: Martín Gaitán
 :css: slides.css
-
+:skip-help: true
 
 Introducción a Git
 ====================
 
 
-.. .. image:: img/Git-Logo-1788C.png
+.. image:: img/Git.png
 
 
 Martín Gaitán / @tin_nqn_ / #8JSL / CC-by-sa
 
 
 --------
+
+:data-reveal: 1
 
 Quién soy?
 ----------
@@ -180,10 +182,6 @@ Y no es tan fácil
 .. image:: img/img_9.png
 
 -----
-
-
-
-------
 
 Instalación
 -----------
@@ -529,22 +527,33 @@ Desde otra rama. Ej: master
 
 .. code:: bash
 
-    git merge experimento_loco
+    git merge [--no-ff] experimento_loco
+
+.. image:: img/merge1.png
 
 ------
 
-Mezcla con conflictos
------------------------
+En general hace magia
+----------------------
 
-A mano
+
+.. image:: img/baby-git.png
+
+
+-----------
+
+Pero a veces no alcanza (conflictos)
+------------------------------------
+
+Corregimos a mano
 
 .. code:: bash
 
-    [corregimos los conflictos]
+    [corregimos los conflictos en el editor]
     git add file.rb
     git commit -m 'mezclando la rama X. corregi a mano el merge ...'
 
-Lo mio o lo de ellos
+O forzamos lo nuestro / lo de ellos
 
 .. code:: bash
 
@@ -568,8 +577,11 @@ Listo, dónde subo mi código?
 
 ---------
 
+:data-reveal: 1
+
 Github
 -------
+
 
 - No es sólo **hosting** git gratis (para software libre)
 - Es una **plataforma social y profesional**
